@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="container1">
+            <div class="header">
+            <input type="text" id="country" placeholder="Country" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="submit" id="check" value="SEARCH">
+             </div>
+          <div class="date-container">
+             <div class="time " id="time">
+                 <span id="am-pm"></span>
+                  </div>
+                <div class="date" id="date">
+            </div>
+    </div>
+</div>  
+    <div class="card">
+    <div class="container2">        
+       <div id = "weaCountry"></div>
+       <div id = "temperature"></div> 
+        <img src="" id = "tempIcon">
+        <div id="weaDes"></div>
+    </div>
+
+    <div class="container3">
+        <div id="feelslike"></div>
+        <div id="humidity"></div>
+        <div id="temp_max"></div>
+        <div id="temp_min"></div>
+    </div>
+
+</div>
+    <script src="main.js">  </script>
+    
+</body>
+</html>
