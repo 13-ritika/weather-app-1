@@ -61,6 +61,10 @@ body{
     border-radius: 16px;
 
 }
+#check:hover{
+    background-image: linear-gradient(rgba(206, 68, 73, 0.805),rgba(145, 34, 73, 0.805),80%,rgba(29, 15, 218, 0.671));
+    color: #fff;
+}
 
 .date-container{
     justify-content: right;
@@ -143,24 +147,3 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 
 }
-/*.container4{
-    
-    padding: 25px;
-   display: flex;
-   color: #fff;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-    
-}
-
-.container4 .weather-forecast-item .day{
-    padding: 5px 15px;
-    background: #3c3c44;
-    border-radius: 50px;
-    text-align: center;
-}
-.container4 .weather-forecast-item .temp{
-    font-weight: 100;
-}
-*/
