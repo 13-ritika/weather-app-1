@@ -19,6 +19,8 @@ let latitude = document.querySelector("#latitude");
 let temp_max = document.querySelector("#temp_max");
 let temp_min = document.querySelector("#temp_min");
 
+
+
 const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 const months = ['Jan', 'Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 setInterval( () => {
@@ -35,8 +37,14 @@ setInterval( () => {
     dateE1.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
 },1000);
 check.addEventListener("click", ()=> {
+    var isValid=true;
     console.log(country.value);
     console.log(city.value);
+    if(country.value==="" || city.value===""){
+        alert("Enter Valid City/Country");
+        isValid=false;
+    }
+    if(isValid===true){
     const key = `74fdc21ac18ca601e418098244eea12c`;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value},${country.value}&lang=en&units=metric&appid=${key}`;
     
@@ -58,7 +66,6 @@ check.addEventListener("click", ()=> {
 
             let iconsForTemp = `http://openweathermap.org/img/wn/${items.icon}@4x.png`;
             tempIcon.src = iconsForTemp; 
-
         })
         /*console.log(data.coord.lat);
         console.log(data.coord.lon);
@@ -68,8 +75,7 @@ check.addEventListener("click", ()=> {
             console.log(data);
             let otherDayForecast = ''
         })*/
-        card.style.background= "rgb(24, 24, 27,0.6);";
-        
+        card.style.background= "rgb(24, 24, 27,0.6);";  
     })
-   
+  }
 })
